@@ -34,6 +34,7 @@ const predictLimiter = rateLimit({
 
 const app = express();
 const port = 3000;
+app.set("trust proxy",1);
 app.use((req, res, next) => {
     req.redisclient = redisclient;
     next();
