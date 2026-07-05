@@ -13,7 +13,14 @@ import { RedisStore } from "rate-limit-redis";
 import { initWebSockets } from "./web.js";
 import "dotenv/config"
 
-const redisclient = createClient();
+const redisUrl = process.env.REDIS_URL || 'redis://127.0.0.1:6379';
+const redisclient = createClient({
+    url: redisUrl,
+    socket: {
+        tls: redisUrl.startsWith('rediss://') ? {} : undefined,
+        rejectUnauthorized: false
+    }
+});
 redisclient.on("error" ,(e)=>console.log("redis error",e));
 await redisclient.connect();
 console.log("Connected to Redis!");

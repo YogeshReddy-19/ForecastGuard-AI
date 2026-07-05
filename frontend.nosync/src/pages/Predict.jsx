@@ -10,7 +10,7 @@ const Predict = () => {
     const [error, setError] = useState("");
     const [liveData, setLiveData] = useState(null);
    useEffect(() => {
-        const socket = io("http://localhost:3000", {
+        const socket = io("https://forecastguardai.onrender.com", {
             transports: ["websocket"] 
         });
         socket.on("connect", () => {
@@ -35,7 +35,7 @@ const Predict = () => {
             return;
         }
         try {
-            const response = await fetch("http://localhost:3000/api/predict", {
+            const response = await fetch("https://forecastguardai.onrender.com/api/predict", {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`,

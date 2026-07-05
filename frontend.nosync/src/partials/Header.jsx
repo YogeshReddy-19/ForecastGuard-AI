@@ -13,7 +13,7 @@ const Header = () => {
             const token = localStorage.getItem("token");
             if (!token) return;
             try {
-                const response = await fetch("http://localhost:3000/api/auth/status", {
+                const response = await fetch("https://forecastguardai.onrender.com/api/auth/status", {
                     headers: { "Authorization": `Bearer ${token}` }
                 });
                 const data = await response.json();

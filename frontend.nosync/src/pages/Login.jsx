@@ -13,7 +13,7 @@ const Login = () => {
         e.preventDefault();
         setError("");
         try {
-            const res = await fetch("http://localhost:3000/api/auth/login", {
+            const res = await fetch("https://forecastguardai.onrender.com/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({email,password}),
@@ -31,7 +31,7 @@ const Login = () => {
         e.preventDefault();
         setError("");
         try {
-            const res = await fetch("http://localhost:3000/api/auth/register", {
+            const res = await fetch("https://forecastguardai.onrender.com/api/auth/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password, name }),
@@ -47,7 +47,7 @@ const Login = () => {
     };
 
     const handleGoogleAuth = () => {
-        window.location.href = "http://localhost:3000/api/auth/google";
+        window.location.href = "https://forecastguardai.onrender.com/api/auth/google";
     };
 
     return (

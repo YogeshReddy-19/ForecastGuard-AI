@@ -16,7 +16,7 @@ const Profile = () => {
                 return;
             }
             try {
-                const response = await fetch("http://localhost:3000/api/profile", {
+                const response = await fetch("https://forecastguardai.onrender.com/api/profile", {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${token}`
