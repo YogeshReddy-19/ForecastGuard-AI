@@ -1,0 +1,104 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 40px;
+  box-sizing: border-box;
+  background-color: var(--bg-card, #ffffff);
+  border-bottom: 1px solid var(--border-color, #E2E8F0);
+  border-radius: 50px;
+    box-shadow: 0px 0px 20px var(--color-primary);
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 48px; 
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-dark, #0A2E36);
+}
+
+.rightsidepart {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.themetoggle {
+  background-color: #f1f5f9; 
+  color: var(--text-muted, #64748B);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.themetoggle:hover {
+  background-color: #e2e8f0;
+  color: var(--color-dark, #0A2E36);
+}
+
+.signin-btn {
+  background-color: var(--color-dark, #0A2E36);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.signin-btn:hover {
+  opacity: 0.9;
+}
+
+.signin-btn:active {
+  transform: scale(0.98); 
+}
+
+.auth-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.username {
+  font-weight: 600;
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+  border-color: #FEE2E2;
+}
