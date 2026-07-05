@@ -16,10 +16,6 @@ import "dotenv/config"
 const redisUrl = process.env.REDIS_URL || 'redis://127.0.0.1:6379';
 const redisclient = createClient({
     url: redisUrl,
-    socket: {
-        tls: redisUrl.startsWith('rediss://') ? {} : undefined,
-        rejectUnauthorized: false
-    }
 });
 redisclient.on("error" ,(e)=>console.log("redis error",e));
 await redisclient.connect();
