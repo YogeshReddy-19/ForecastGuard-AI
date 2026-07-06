@@ -32,7 +32,7 @@ const Header = () => {
     }, [location.pathname]);
     const handleLogout = async () => {
         try {
-            await fetch("http://localhost:3000/api/auth/logout", { method: "POST" });
+            await fetch("https://forecastguardai.onrender.com/api/auth/logout", { method: "POST" });
             localStorage.removeItem("token"); 
             setUser(null);
             navigate("/");
