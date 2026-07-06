@@ -88,6 +88,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <div className="Note">
+                <p>Price data: 15-minute delay via Yahoo Finance</p>
+                <p>Model trained on AAPL data 1980–2020</p>
+                <p>Not financial advice</p>
+            </div>
         </div>
     );
 };
