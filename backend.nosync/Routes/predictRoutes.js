@@ -1,7 +1,8 @@
+import "dotenv/config";
 import {Router} from "express";
 import { getprediction } from "../Controllers/predictController.js";
 import jwt from "jsonwebtoken";
-import "dotenv/config";
+
 
 const router = new Router();
 

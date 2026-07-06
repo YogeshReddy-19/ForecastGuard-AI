@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import http from "http";
 import bodyParser from "body-parser"
@@ -11,7 +12,7 @@ import { createClient } from "redis";
 import rateLimit from "express-rate-limit";
 import { RedisStore } from "rate-limit-redis";
 import { initWebSockets } from "./web.js";
-import "dotenv/config"
+
 
 const redisUrl = process.env.REDIS_URL || 'redis://127.0.0.1:6379';
 const redisclient = createClient({

@@ -1,3 +1,4 @@
+import "dotenv/config";
 import {Router} from "express";
 import passport from "passport";
 import { login,register,logout,getstatus } from "../Controllers/authController.js";

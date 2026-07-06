@@ -1,6 +1,7 @@
+import "dotenv/config";
 import axios from "axios";
 import db from "../db.js";
-import "dotenv/config";
+
 
 export const getprediction = async(req,res)=>{
     try{

@@ -1,3 +1,4 @@
+import "dotenv/config";
 import {Router} from "express";
 import { getprofile } from "../Controllers/profileController.js";
 import jwt from "jsonwebtoken";
